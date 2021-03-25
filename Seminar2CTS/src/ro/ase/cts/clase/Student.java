@@ -5,8 +5,21 @@ import java.util.Arrays;
 public class Student extends Aplicant {
 	protected String facultate;
 	protected int an_studii;
-	
-	
+	private static float sumaFinantare=20;
+
+	public static float getSumaFinantare() {
+		return sumaFinantare;
+	}
+
+	public float getSumaFinantata() {
+		return sumaFinantare;
+	}
+
+	public static void setSumaFinantare(float sumaFinantare) {
+		Student.sumaFinantare = sumaFinantare;
+	}
+
+
 	public String getFacultate() {
 		return facultate;
 	}
@@ -30,6 +43,7 @@ public class Student extends Aplicant {
 		super(nume,prenume,varsta,punctaj,nr_proiecte,denumireProiect);
 		this.facultate = facultate;
 		this.an_studii = an_studii;
+
 	}
 	@Override
 	public String toString() {
@@ -39,7 +53,7 @@ public class Student extends Aplicant {
 	
 	public int finantare() {
 		int s=20;
-		System.out.println("Studentul "+getNume()+" "+getPrenume()+" primeste"+s+" Euro/zi in proiect.");
+		System.out.println("Studentul "+getNume()+" "+getPrenume()+" primeste "+s+" Euro/zi in proiect.");
 		return s;
 	}
 	
